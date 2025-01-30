@@ -1,0 +1,99 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f1c6d6, #f7a6d3);
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    position: relative;  /* For the floating hearts to position correctly */
+}
+
+/* Container for centering the content */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5rem;
+    color: #f14c87;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  /* Soft text shadow */
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button container styling */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button styling */
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #f14c87;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff6183;
+}
+
+/* Response message styling */
+#response-message {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #f14c87;
+}
+
+/* Heart animation */
+#heart {
+    font-size: 50px;  /* Size of the heart */
+    color: pink;      /* Color of the heart */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: heartPop 1s ease-out;
+}
+
+/* Animation for the heart pop */
+@keyframes heartPop {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);  /* Heart grows */
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);  /* Heart returns to normal */
+        opacity: 0;
+    }
+}
